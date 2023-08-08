@@ -2,7 +2,8 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core"
-	xmlns:form="sap.ui.layout.form" core:require="{formatter: 'com/myorg/myapp/model/formatter'}">
+	xmlns:form="sap.ui.layout.form" core:require="{formatter: 'com/myorg/myapp/model/formatter'}"
+	xmlns:cc="com.myorg.myapp.control">
 
 	<Page id="page" title="Current Weather" titleAlignment="Center">
 		<content >
@@ -19,6 +20,9 @@
 
 				<Label text="Wind Direction" />
 				<Text text="{/current_weather/winddirection} °" />
+
+				<Label text="Wind Visualization" />
+				<cc:WindDirection direction="{/current_weather/winddirection}" />
 			</form:SimpleForm>
 		</content>
 	</Page>
